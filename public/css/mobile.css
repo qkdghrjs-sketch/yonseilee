@@ -16,9 +16,9 @@
   .container { padding: 0 16px; }
 
   /* --- 헤더 --- */
-  .header-top { padding-top: 10px; padding-bottom: 6px; justify-content: space-between !important; }
-  .logo img { height: 100px !important; }
-  .header.scrolled .logo img { height: 60px !important; }
+  .header-top { padding-top: 6px; padding-bottom: 4px; justify-content: space-between !important; }
+  .logo img { height: 56px !important; }
+  .header.scrolled .logo img { height: 44px !important; }
   .header-nav-wrap { display: none !important; }
   .mobile-menu-btn {
     display: flex !important;
@@ -170,8 +170,8 @@
   .why-features li { font-size: 14px; }
 
   /* --- 세부페이지 공통 --- */
-  .page-hero { padding: 160px 16px 40px; }
-  .page-hero-sm { padding: 160px 16px 36px; }
+  .page-hero { padding: 100px 16px 32px; }
+  .page-hero-sm { padding: 100px 16px 28px; }
   .page-hero-inner h1 { font-size: 26px; }
   .page-hero-inner p { font-size: 14px; }
   .page-section { padding: 28px 0 36px; }
@@ -320,8 +320,8 @@
   .sv2-sub { font-size: 10px; margin-bottom: 10px; }
   .sv2-desc { font-size: 13px; }
   .sv2-s1, .sv2-s2, .sv2-s3 { padding-bottom: 64px; }
-  .logo img { height: 80px !important; }
-  .header.scrolled .logo img { height: 48px !important; }
+  .logo img { height: 48px !important; }
+  .header.scrolled .logo img { height: 40px !important; }
   .qn-side { flex-direction: column; }
   .qn-bottom { grid-template-columns: 1fr; }
   .clinic-card { height: 180px; }
