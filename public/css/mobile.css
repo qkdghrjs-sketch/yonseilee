@@ -257,11 +257,51 @@
   .col-chart-wrap { padding: 18px 14px; }
 
   /* --- gen-process / gen-strengths --- */
-  .gen-process h2, .gen-strengths h2 { font-size: 20px; }
-  .gen-process-steps { padding: 18px 16px; }
-  .gen-step p { font-size: 14px; }
+  .gen-process h2, .gen-strengths h2 { font-size: 18px; }
+  .gen-process-steps { padding: 16px 14px; max-width: 100%; }
+  .gen-step { gap: 10px; padding: 10px 0; }
+  .gen-step-num { width: 24px; height: 24px; font-size: 12px; min-width: 24px; }
+  .gen-step p { font-size: 14px; line-height: 1.6; }
+  .gen-step p strong { display: inline; }
   .gen-str-grid { grid-template-columns: 1fr; }
-  .gen-str-item { font-size: 14px; padding: 12px 14px; }
+  .gen-str-item { font-size: 13px; padding: 12px 14px; }
+  .gen-str-item svg { width: 16px; height: 16px; }
+
+  /* --- 번호 리스트 (col-reason-list) 모바일 최적화 --- */
+  .col-reason-list li {
+    font-size: 14px;
+    gap: 10px;
+    margin-bottom: 10px;
+    line-height: 1.65;
+  }
+  .col-reason-list li::before {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    min-width: 22px;
+    margin-top: 2px;
+  }
+
+  /* --- 체크 카드 모바일 --- */
+  .col-check {
+    font-size: 13px !important;
+    padding: 9px 10px !important;
+    gap: 6px !important;
+    line-height: 1.5 !important;
+  }
+  .col-check-box { width: 14px !important; height: 14px !important; min-width: 14px; }
+
+  /* --- 주기 카드 모바일 --- */
+  .cycle-card { padding: 16px 14px; }
+  .cycle-card-who { font-size: 12px; }
+  .cycle-card-period { font-size: 18px; margin-bottom: 4px; }
+  .cycle-card p { font-size: 12px; line-height: 1.5; }
+
+  /* --- 예방/특징 카드 모바일 --- */
+  .col-prev-item { padding: 12px 10px; }
+  .col-prev-num { width: 24px; height: 24px; font-size: 12px; margin-bottom: 6px; }
+  .col-prev-item strong { font-size: 13px; }
+  .col-prev-item p { font-size: 11px; }
 
   /* --- 내시경 특별함 3카드 --- */
   .endo-why-special { padding: 32px 0; }
