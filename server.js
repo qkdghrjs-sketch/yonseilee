@@ -886,53 +886,6 @@ app.get('/endoscopy/gastroscopy', (req, res) => {
         </div>
       </div>
 
-      <!-- 반드시 해야 하는 이유 -->
-      <div class="col-reasons" data-anim>
-        <h2>위내시경을 반드시 하셔야하는 이유</h2>
-        <ol class="col-reason-list">
-          <li>우리나라는 <strong>위암 발생률이 매우 높아</strong> 증상이 없더라도 위내시경이 필요합니다.</li>
-          <li>조기위암은 대부분 <strong>무증상</strong>이므로 정기 검사가 반드시 필요합니다.</li>
-          <li>위장조영술은 정확도가 낮아 <strong>반드시 위내시경</strong>을 하셔야 합니다.</li>
-        </ol>
-        <div class="col-chart-wrap" data-anim>
-          <h3>2021년 암종별 발생자 수</h3>
-          <p class="col-chart-source">남녀 전체, 보건복지부 발표자료</p>
-          <canvas id="cancerChart" height="260"></canvas>
-        </div>
-      </div>
-
-      <!-- 검사 주기 -->
-      <div class="col-cycle" data-anim>
-        <h2>위내시경의 검사 주기</h2>
-        <div class="cycle-cards">
-          <div class="cycle-card">
-            <div class="cycle-card-who">증상이 있는 분</div>
-            <div class="cycle-card-period">나이 무관</div>
-            <p>증상이 있으면 나이에 상관없이 받으세요.</p>
-          </div>
-          <div class="cycle-card cycle-card-highlight">
-            <div class="cycle-card-who">40세 이상</div>
-            <div class="cycle-card-period">2년마다 1회</div>
-            <p>국가 암검진으로 정기 검사를 받으세요.</p>
-          </div>
-          <div class="cycle-card">
-            <div class="cycle-card-who">고위험군</div>
-            <div class="cycle-card-period">매년 1회</div>
-            <p>가족력·위축성위염·헬리코박터 감염 등</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 편안한 위내시경 -->
-      <div class="col-comfort" data-anim>
-        <h2>편안한 위내시경을 위한 제안</h2>
-        <ol class="col-reason-list">
-          <li><strong>진정(수면) 내시경</strong>으로 편하게 검사할 수 있습니다.</li>
-          <li>내시경 경험이 풍부한 <strong>전문의</strong>에게 검사받으면 편안합니다.</li>
-          <li><strong>고화질 최신 장비</strong>로 병변을 놓치지 않습니다.</li>
-        </ol>
-      </div>
-
       <!-- 검사 후 주의사항 -->
       <div class="col-after" data-anim>
         <h2>위내시경 후 주의사항</h2>
@@ -1640,44 +1593,7 @@ app.get('/endoscopy/colonoscopy', (req, res) => {
         </div>
       </div>
 
-      <!-- 섹션4: 반드시 해야 하는 이유 + 차트 -->
-      <div class="col-reasons" data-anim>
-        <h2>대장내시경을 반드시 하셔야하는 이유</h2>
-        <ol class="col-reason-list">
-          <li>대장암 검진을 위한 국가 암검진으로 분변잠혈검사(대변검사)를 시행하고 있으나, 대변검사는 검사의 정확도가 매우 낮습니다. 따라서 <strong>대장내시경 검사가 필요</strong>합니다.</li>
-          <li>대장용종 중 선종은 대장암으로 발전할 수 있습니다. 대장내시경 검사를 하면서 이러한 대장용종을 제거하면 <strong>대장암을 예방</strong>할 수 있습니다.</li>
-          <li>조기 대장암은 대부분 무증상이기 때문에 대장 관련 증상이 없다 하더라도 <strong>대장내시경은 반드시 필요</strong>합니다.</li>
-          <li>우리나라의 대장암 발생률은 증가하고 있습니다. 따라서 증상이 없더라도 <strong>대장암의 조기 발견</strong>을 위해서는 대장내시경이 반드시 필요합니다.</li>
-        </ol>
-        <div class="col-chart-wrap" data-anim>
-          <h3>2021년 암종별 발생자 수</h3>
-          <p class="col-chart-source">남녀 전체, 2021년 보건복지부 발표자료</p>
-          <canvas id="cancerChart" height="280"></canvas>
-        </div>
-      </div>
-
-      <!-- 섹션5: 검사 주기 -->
-      <div class="col-cycle" data-anim>
-        <h2>대장내시경의 검사 주기</h2>
-        <ol class="col-reason-list">
-          <li>대장내시경 검사는 <strong>40세 이상</strong>인 경우 추천드립니다.</li>
-          <li>대장암이 걱정되거나 대장 관련 증상이 있으면, 나이에 상관없이 대장내시경을 받으셔야 합니다.</li>
-          <li>대장내시경 검사 결과가 정상이라면 <strong>5년 후 재검</strong>하시면 됩니다.</li>
-          <li>대장용종 중 선종이 1cm 이상이거나, 선종이 3개 이상이거나, 톱니 모양의 용종이거나, 조직 검사상 고도 이형성인 경우 <strong>1년 후 추적검사</strong>가 필요합니다.</li>
-        </ol>
-      </div>
-
-      <!-- 섹션6: 편안한 대장내시경 -->
-      <div class="col-comfort" data-anim>
-        <h2>편안한 대장내시경을 위한 제안</h2>
-        <ol class="col-reason-list">
-          <li>진정(수면) 내시경으로 편하게 검사하실 수 있습니다. 진정(수면) 내시경은 위험하지 않으니 걱정하지 않으셔도 됩니다.</li>
-          <li>대장내시경 경험이 많은 의사에게 검사받으면 편안합니다.</li>
-          <li>화질이 뛰어나서 병변을 놓치지 않는 성능이 좋은 장비로 검사받습니다.</li>
-        </ol>
-      </div>
-
-      <!-- 섹션7: 검사 전 주의사항 -->
+      <!-- 검사 전 주의사항 -->
       <div class="col-before" data-anim>
         <h2>대장내시경 전 주의사항</h2>
 
