@@ -55,47 +55,30 @@
   }
   .sv2-s2 .sv2-btns { align-items: flex-start; }
 
-  /* --- 퀵 네비게이션 (5카드 + 카카오 버튼) --- */
+  /* --- 퀵 네비게이션 (4카드 + 카카오 버튼) --- */
   .quicknav { padding: 16px 0; }
   .qn-container { padding: 0 12px; }
-  .qn-top { display: contents; }
-  .qn-side { display: contents; }
-  .qn-bottom { display: contents; }
-  .qn-container {
-    display: grid !important;
+  .qn-m-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
-  /* 5개 카드: 2+2+1(풀너비) */
-  .qn-card-hero, .qn-card-side, .qn-card-bottom {
+  .qn-card-item {
     height: 110px;
     border-radius: 12px;
   }
-  /* 마지막 카드(찾아오시는길) 풀너비 */
-  .qn-card-bottom:last-of-type {
-    grid-column: 1 / -1;
-    height: 100px;
-  }
-  .qn-card-hero .qn-body, .qn-body { padding: 14px 12px; }
-  .qn-card-hero .qn-body h4, .qn-body h4 { font-size: 15px; }
-  .qn-body p { font-size: 12px; }
-  .qn-tag { display: none; }
-  .qn-arrow { display: none; }
-  /* 카카오톡 버튼 */
+  .qn-card-item .qn-body { padding: 14px 12px; }
+  .qn-card-item .qn-body h4 { font-size: 15px; }
+  .qn-card-item .qn-body p { font-size: 12px; }
+  .qn-tag, .qn-arrow { display: none; }
   .qn-kakao-btn {
-    grid-column: 1 / -1;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #FEE500;
-    color: #3C1E1E;
+    display: flex;
+    margin-top: 8px;
+    padding: 14px;
+    font-size: 15px;
     border-radius: 12px;
-    padding: 16px;
-    font-size: 16px;
-    font-weight: 700;
   }
-  .qn-kakao-icon { font-size: 20px; }
+  .qn-kakao-icon { font-size: 18px; }
 
   /* --- 블로그·공지 섹션 --- */
   .bn-content { padding: 36px 16px; }

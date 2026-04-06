@@ -94,50 +94,29 @@
   <!-- 퀵 네비게이션 -->
   <section class="quicknav" id="quicknav">
     <div class="qn-container">
-      <div class="qn-top">
-        <a href="/about/doctors" class="qn-card qn-card-hero" data-delay="0">
+      <!-- 데스크탑 구조 유지 + 모바일에서 qn-m-grid로 전환 -->
+      <div class="qn-m-grid">
+        <a href="/about/doctors" class="qn-card qn-card-item" data-delay="0">
           <div class="qn-bg" style="background-image:url('https://cdn.imweb.me/upload/S20260108b9005a7eb2710/45190b4121886.jpeg')"></div>
           <div class="qn-bg-overlay" style="--qn-color:#0EA5E9"></div>
-          <div class="qn-body">
-            <span class="qn-tag">ABOUT US</span>
-            <h4>의료진 소개</h4>
-            <p>내과·소아청소년과 전문의</p>
-            <span class="qn-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-          </div>
+          <div class="qn-body"><h4>의료진 소개</h4><p>내과·소아청소년과 전문의</p></div>
         </a>
-        <div class="qn-side">
-          <a href="/about/facility" class="qn-card qn-card-side" data-delay="1">
-            <div class="qn-bg" style="background-image:url('https://cdn.imweb.me/upload/S20260108b9005a7eb2710/533d4e7b9f283.jpeg')"></div>
-            <div class="qn-bg-overlay" style="--qn-color:#F59E0B"></div>
-            <div class="qn-body">
-              <h4>시설 안내</h4>
-              <p>검진 · 내시경 · 진료 공간</p>
-              <span class="qn-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="/about/hours" class="qn-card qn-card-side" data-delay="2">
-            <div class="qn-bg" style="background-image:url('https://cdn.imweb.me/upload/S20260108b9005a7eb2710/2a354a078f677.jpeg')"></div>
-            <div class="qn-bg-overlay" style="--qn-color:#3B82F6"></div>
-            <div class="qn-body">
-              <h4>진료시간</h4>
-              <p>평일 · 주말 · 공휴일</p>
-              <span class="qn-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="qn-bottom">
-        <a href="#location" class="qn-card qn-card-bottom" data-delay="3">
+        <a href="/about/facility" class="qn-card qn-card-item" data-delay="1">
           <div class="qn-bg" style="background-image:url('https://cdn.imweb.me/upload/S20260108b9005a7eb2710/533d4e7b9f283.jpeg')"></div>
+          <div class="qn-bg-overlay" style="--qn-color:#F59E0B"></div>
+          <div class="qn-body"><h4>시설 안내</h4><p>검진·내시경·진료 공간</p></div>
+        </a>
+        <a href="/about/hours" class="qn-card qn-card-item" data-delay="2">
+          <div class="qn-bg" style="background-image:url('https://cdn.imweb.me/upload/S20260108b9005a7eb2710/2a354a078f677.jpeg')"></div>
+          <div class="qn-bg-overlay" style="--qn-color:#3B82F6"></div>
+          <div class="qn-body"><h4>진료시간</h4><p>평일·주말·공휴일</p></div>
+        </a>
+        <a href="#location" class="qn-card qn-card-item" data-delay="3">
+          <div class="qn-bg" style="background-image:url('https://cdn.imweb.me/upload/S20260108b9005a7eb2710/049c24abf55ff.jpeg')"></div>
           <div class="qn-bg-overlay" style="--qn-color:#10B981"></div>
-          <div class="qn-body">
-            <h4>오시는 길</h4>
-            <p>주차 및 대중교통</p>
-            <span class="qn-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-          </div>
+          <div class="qn-body"><h4>오시는 길</h4><p>주차 및 대중교통</p></div>
         </a>
       </div>
-      <!-- 카카오톡 상담 버튼 -->
       <a href="https://pf.kakao.com/_xevPpn" target="_blank" class="qn-kakao-btn">
         <span class="qn-kakao-icon">💬</span>
         <span>카카오톡으로 상담하기</span>

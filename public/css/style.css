@@ -607,6 +607,27 @@ a {
   border-color: rgba(155, 89, 182, 0.5);
 }
 
+/* 퀵네비 그리드 (데스크탑: 4열) */
+.qn-m-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.qn-card-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 200px;
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qn-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+}
+
 /* 카카오톡 퀵네비 버튼 (데스크탑) */
 .qn-kakao-btn {
   display: flex;
