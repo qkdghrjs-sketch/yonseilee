@@ -16,7 +16,14 @@
   .container { padding: 0 16px; }
 
   /* --- 헤더 --- */
-  .header-top { padding-top: 4px; padding-bottom: 2px; justify-content: space-between !important; }
+  .header { border-bottom: 1px solid #E8E8E8; }
+  .header-top {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 0 !important;
+  }
   .logo img { height: 40px !important; }
   .header.scrolled .logo img { height: 36px !important; }
   .header-nav-wrap { display: none !important; }
@@ -24,18 +31,24 @@
     display: flex !important;
     position: static !important;
     transform: none !important;
-    width: 36px;
-    height: 36px;
+    flex-direction: column !important;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
-    background: rgba(107,45,139,0.08);
+    gap: 5px;
+    background: none;
+    border: 1px solid #E2E8F0;
     border-radius: 8px;
     padding: 8px;
+    cursor: pointer;
+    z-index: 1001;
   }
   .mobile-menu-btn span {
-    width: 22px;
-    height: 2.5px;
-    background: var(--primary-dark);
+    display: block !important;
+    width: 20px;
+    height: 2px;
+    background: #334155 !important;
     border-radius: 2px;
   }
 
