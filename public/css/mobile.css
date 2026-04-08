@@ -116,58 +116,28 @@
   }
   .sv2-s2 .sv2-btns { align-items: flex-start; }
 
-  /* --- 퀵 네비게이션 (4카드 + 카카오 버튼) --- */
-  .quicknav { padding: 16px 0; overflow: hidden; }
-  .qn-container { padding: 0 12px; display: block !important; }
-  .qn-m-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  .qn-card-item {
-    height: 110px;
-    border-radius: 12px;
-  }
-  .qn-card-item .qn-body { padding: 14px 12px; }
-  .qn-card-item .qn-body h4 { font-size: 15px; }
-  .qn-card-item .qn-body p { font-size: 12px; }
-  .qn-tag, .qn-arrow { display: none; }
-  .qn-kakao-btn {
-    display: flex;
-    margin-top: 8px;
-    padding: 14px;
-    font-size: 15px;
-    border-radius: 12px;
-  }
-  .qn-kakao-icon { font-size: 18px; }
+  /* --- 병원안내 섹션 --- */
+  .about-section { padding: 48px 0; }
+  .about-header { margin-bottom: 28px; }
+  .about-title { font-size: 24px; }
+  .about-subtitle { font-size: 14px; }
+  .about-grid { grid-template-columns: 1fr; gap: 12px; }
+  .about-hero { min-height: 240px; }
+  .about-facility { min-height: 180px; }
+  .about-right { gap: 12px; }
+  .about-info-row { grid-template-columns: 1fr; gap: 12px; }
+  .about-card-body { padding: 20px 18px; }
+  .about-card-body h3 { font-size: 20px; }
+  .about-card-body p { font-size: 13px; }
+  .about-badge { font-size: 10px; margin-bottom: 6px; }
+  .about-link { display: none; }
+  .about-info-card { padding: 22px 18px; gap: 10px; }
+  .about-info-card h4 { font-size: 16px; }
+  .about-info-icon { width: 44px; height: 44px; border-radius: 12px; }
+  .about-info-icon svg { width: 22px; height: 22px; }
+  .about-info-detail span { font-size: 13px; }
 
-  /* --- 블로그·공지 섹션 --- */
-  .blog-notice-section { background-attachment: scroll; }
-  .bn-content { padding: 24px 12px; }
-  .bn-grid { grid-template-columns: 1fr; gap: 14px; }
-  .bn-header { margin-bottom: 8px; }
-  .bn-header-title { font-size: 15px; gap: 6px; }
-  .bn-header-title span { font-size: 15px; }
-  .bn-header-title svg { width: 18px; height: 18px; }
-  .bn-more-btn { font-size: 12px; padding: 4px 12px; }
-  .bn-card { border-radius: 10px; }
-  .bn-item a { padding: 10px 14px; }
-  .bn-item-title { font-size: 13px; }
-  .bn-item:nth-child(4) { display: none; }
 
-  /* --- 약속(Promise) 섹션 --- */
-  .promise-content { padding: 48px 16px; }
-  .promise-header h2 { font-size: 24px; }
-  .promise-header p { font-size: 14px; }
-  .promise-mv-grid { grid-template-columns: 1fr; gap: 12px; }
-  .promise-mv-body { padding: 20px 18px; }
-  .promise-mv-label { font-size: 16px; }
-  .promise-grid { grid-template-columns: 1fr; gap: 8px; }
-  .promise-card { padding: 16px 18px; gap: 12px; }
-  .promise-card strong { font-size: 15px; }
-  .promise-card p { font-size: 13px; white-space: normal; }
-  .promise-divider-text { font-size: 12px; }
-  .promise-cta-btn { padding: 12px 24px; font-size: 14px; }
 
   /* --- 진료과목(Clinic) 섹션 --- */
   .clinic-section { padding: 48px 0; }
@@ -199,9 +169,6 @@
   .footer-info p { font-size: 12px; }
   .footer-logo img { height: 40px; }
 
-  /* --- 플로팅 카카오 --- */
-  .floating-kakao span { display: none; }
-  .floating-kakao { padding: 14px; border-radius: 50%; font-size: 22px; bottom: 20px; right: 16px; }
 
   /* --- WHY 섹션 --- */
   .why-section { padding: 28px 0; }
@@ -225,7 +192,6 @@
   .page-cta h3 { font-size: 18px; }
   .cta-phone { font-size: 24px; }
   .cta-notice { font-size: 13px; }
-  .cta-kakao-btn { font-size: 15px; padding: 12px 24px; }
 
   /* --- 세부페이지 본문 (col-detail) --- */
   .col-detail { padding: 28px 0 20px; }

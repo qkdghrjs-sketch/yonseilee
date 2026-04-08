@@ -1,3 +1,44 @@
+/* === 연세대 출신 어필 배너 === */
+.doctor-yonsei-banner {
+  margin-bottom: 40px;
+}
+
+.yonsei-banner-inner {
+  background: linear-gradient(135deg, #003876 0%, #2E86AB 100%);
+  border-radius: 16px;
+  padding: 36px 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.yonsei-banner-inner h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.yonsei-banner-inner p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .yonsei-banner-inner {
+    padding: 28px 20px;
+  }
+  .yonsei-banner-inner h3 {
+    font-size: 18px;
+  }
+  .yonsei-banner-inner p {
+    font-size: 13px;
+  }
+  .yonsei-banner-inner br {
+    display: none;
+  }
+}
+
 /* === 의료진 소개 페이지 === */
 .doctors-page-grid {
   display: grid;
@@ -16,7 +57,7 @@
 
 .doctor-page-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(107,45,139,0.12);
+  box-shadow: 0 8px 32px rgba(46,134,171,0.12);
 }
 
 .doctor-page-photo {
@@ -38,8 +79,8 @@
 
 .doctor-page-tag {
   display: inline-block;
-  background: #F5F0F8;
-  color: #6B2D8B;
+  background: #E8F4F8;
+  color: #2E86AB;
   padding: 5px 14px;
   border-radius: 50px;
   font-size: 13px;
@@ -82,7 +123,7 @@
   top: 13px;
   width: 6px;
   height: 6px;
-  background: #9B59B6;
+  background: #2E86AB;
   border-radius: 50%;
 }
 

@@ -45,39 +45,14 @@
   });
 })();
 
-// ===== 퀵 네비게이션 Stagger 애니메이션 =====
+// ===== 병원안내 섹션 애니메이션 =====
 (function() {
-  var section = document.querySelector('.quicknav');
-  if (!section) return;
   var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        document.querySelectorAll('.qn-card').forEach(function(c) { c.classList.add('qn-visible'); });
-        obs.disconnect();
-      }
-    });
-  }, { threshold: 0.2 });
-  obs.observe(section);
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('about-visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-anim-about]').forEach(function(el) { obs.observe(el); });
 })();
 
-// ===== 블로그 & 공지사항 애니메이션 =====
-(function() {
-  var section = document.querySelector('.blog-notice-section');
-  if (!section) return;
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        document.querySelectorAll('.bn-column').forEach(function(c) { c.classList.add('bn-visible'); });
-        document.querySelectorAll('.bn-item').forEach(function(item) {
-          var delay = parseInt(item.dataset.stagger) * 50;
-          setTimeout(function() { item.classList.add('bn-item-visible'); }, 300 + delay);
-        });
-        obs.disconnect();
-      }
-    });
-  }, { threshold: 0.15 });
-  obs.observe(section);
-})();
 
 // ===== Clinic 섹션 stagger =====
 (function() {
@@ -94,13 +69,6 @@
   obs.observe(section);
 })();
 
-// ===== Promise 섹션 =====
-(function() {
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('pm-visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('[data-anim-promise]').forEach(function(el) { obs.observe(el); });
-})();
 
 // ===== 스크롤 애니메이션 =====
 (function() {

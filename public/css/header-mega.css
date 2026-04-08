@@ -90,10 +90,6 @@
   padding-left: 24px;
 }
 
-/* 카카오 버튼 (네비 내) */
-.nav-mega .nav-kakao {
-  margin-left: 12px;
-}
 
 /* === 모바일 드로어 === */
 .mobile-drawer-overlay {
@@ -141,6 +137,13 @@
 
 .drawer-logo {
   height: 36px;
+}
+
+.drawer-logo.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2E86AB;
+  line-height: 36px;
 }
 
 .drawer-close {
@@ -215,18 +218,6 @@
   background: #F0F0F0;
 }
 
-.drawer-kakao {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 24px;
-  padding: 14px;
-  background: #FEE500;
-  color: #3C1E1E;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 700;
-}
 
 /* === 반응형 === */
 @media (min-width: 769px) {

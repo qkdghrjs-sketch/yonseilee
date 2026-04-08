@@ -69,13 +69,6 @@
 .cta-phone { font-size: 32px; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
 .cta-notice { font-size: 14px; color: #AAA; margin-bottom: 20px; }
 
-.cta-kakao-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 32px; background: #FEE500; color: #3C1E1E;
-  border-radius: 12px; font-size: 16px; font-weight: 700;
-  transition: all 0.2s;
-}
-.cta-kakao-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(254, 229, 0, 0.4); }
 
 /* === 애니메이션 === */
 [data-anim] {

@@ -31,7 +31,7 @@ document.querySelectorAll('.drawer-group-btn').forEach(btn => {
 });
 
 // 드로어 링크 클릭 시 닫기
-document.querySelectorAll('.drawer-sub a, .drawer-kakao').forEach(link => {
+document.querySelectorAll('.drawer-sub a').forEach(link => {
   link.addEventListener('click', closeDrawer);
 });
 
