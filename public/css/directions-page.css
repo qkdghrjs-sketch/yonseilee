@@ -63,7 +63,7 @@
 }
 
 .directions-map .root_daum_roughmap .wrap_map {
-  height: 400px !important;
+  height: 600px !important;
 }
 
 @media (max-width: 768px) {
@@ -73,6 +73,6 @@
   }
 
   .directions-map .root_daum_roughmap .wrap_map {
-    height: 300px !important;
+    height: 450px !important;
   }
 }

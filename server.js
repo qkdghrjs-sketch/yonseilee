@@ -730,7 +730,7 @@ app.get('/nephrology/hemodialysis', (req, res) => {
     title: child.label,
     activeCategoryId: 'nephrology',
     bodyContent: body,
-    extraCss: '<link rel="stylesheet" href="/css/pages.css"><link rel="stylesheet" href="/css/why-section.css"><link rel="stylesheet" href="/css/article.css">',
+    extraCss: '<link rel="stylesheet" href="/css/pages.css"><link rel="stylesheet" href="/css/why-section.css"><link rel="stylesheet" href="/css/colonoscopy.css">',
     extraJs: '<script src="/js/page-anim.js"></script>'
   }));
 });
@@ -773,6 +773,7 @@ app.get('/about/hours', (req, res) => {
           </div>
           <div class="hours-time-wrap">
             <span class="hours-time">09:00 – 18:00</span>
+            <span class="hours-lunch-note">점심 12:00 – 13:00</span>
           </div>
         </div>
         <div class="hours-row" id="row-sat">
@@ -797,7 +798,7 @@ app.get('/about/hours', (req, res) => {
 
       <div class="hours-notice" data-anim>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-        공휴일에는 진료를 하지 않습니다. 점심시간 없이 진료합니다.
+        공휴일에는 진료를 하지 않습니다. 점심시간은 12:00 – 13:00입니다.
       </div>
 
       <div class="page-cta" data-anim>
@@ -812,11 +813,11 @@ app.get('/about/hours', (req, res) => {
   (function() {
     const HOLIDAYS = [
       '2025-01-01','2025-01-28','2025-01-29','2025-01-30',
-      '2025-03-01','2025-05-05','2025-05-06','2025-06-06',
+      '2025-03-01','2025-05-01','2025-05-05','2025-05-06','2025-06-06',
       '2025-08-15','2025-10-03','2025-10-05','2025-10-06','2025-10-07','2025-10-08',
       '2025-10-09','2025-12-25',
       '2026-01-01','2026-01-27','2026-01-28','2026-01-29',
-      '2026-02-28','2026-03-01','2026-05-05','2026-05-24','2026-05-25',
+      '2026-02-28','2026-03-01','2026-05-01','2026-05-05','2026-05-24','2026-05-25',
       '2026-06-06','2026-08-15','2026-09-24','2026-09-25','2026-09-26',
       '2026-10-03','2026-10-05','2026-10-09','2026-12-25'
     ];
@@ -838,7 +839,7 @@ app.get('/about/hours', (req, res) => {
       isOpen = (h > 9 || (h === 9 && m >= 0)) && h < 13;
     } else {
       rowId = 'row-weekday'; tagId = 'tag-weekday';
-      isOpen = (h > 9 || (h === 9 && m >= 0)) && h < 18;
+      isOpen = ((h >= 9 && h < 12) || (h >= 13 && h < 18));
     }
 
     // 오늘 행 강조

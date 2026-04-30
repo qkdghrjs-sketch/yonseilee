@@ -195,7 +195,7 @@
 
   /* --- 세부페이지 본문 (col-detail) --- */
   .col-detail { padding: 28px 0 20px; }
-  .col-detail h2 { font-size: 20px; margin-bottom: 12px; }
+  .col-detail h2 { font-size: 20px; margin-bottom: 16px; }
   .col-detail h3 { font-size: 17px; }
   .col-intro { flex-direction: column; gap: 16px; padding-bottom: 20px; }
   .col-intro-img { width: 100%; }
@@ -223,7 +223,7 @@
   .col-chart-wrap { padding: 18px 14px; }
 
   /* --- 심플 리스트 --- */
-  .gen-simple-list h2 { font-size: 18px; }
+  .gen-simple-list h2 { font-size: 18px; margin-bottom: 16px; }
   .gen-bullet li { font-size: 14px; padding: 7px 0 7px 16px; }
   .gen-bullet li::before { width: 6px; height: 6px; top: 14px; }
   .gen-check { grid-template-columns: 1fr; }
