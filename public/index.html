@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>연세이내과 | 신장내과·혈액투석·만성질환·수액센터</title>
   <meta name="description" content="고양시 일산서구 중앙로 1388, 2층. 대학병원 교수출신 신장내과 전문의 직접 진료. 혈액투석센터, 신장클리닉, 만성질환클리닉, 수액센터.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="연세이내과 | 신장내과·혈액투석·만성질환·수액센터">
+  <meta property="og:description" content="고양시 일산서구 중앙로 1388, 2층. 대학병원 교수출신 신장내과 전문의 직접 진료. 혈액투석센터, 신장클리닉, 만성질환클리닉, 수액센터.">
+  <meta property="og:image" content="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c083a202cc5e6.png">
+  <meta property="og:url" content="https://yonseilee.com">
+  <meta property="og:site_name" content="연세이내과">
+  <link rel="canonical" href="https://yonseilee.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/mobile.css">
 </head>
@@ -240,7 +248,7 @@
     <div class="container">
       <div class="dialysis-hl-inner">
         <div class="dialysis-hl-img-wrap">
-          <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/369116022/IV/MF/TP/68792294/fresenius-5008-5008s-hemodialysis-machine.jpg" alt="Fresenius 5008S 혈액투석기">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/369116022/IV/MF/TP/68792294/fresenius-5008-5008s-hemodialysis-machine.jpg" alt="Fresenius 5008S 혈액투석기" loading="lazy">
         </div>
         <div class="dialysis-hl-content">
           <span class="dialysis-hl-badge">HEMODIALYSIS EQUIPMENT</span>
@@ -330,11 +338,11 @@
   (function() {
     const HOLIDAYS = [
       '2025-01-01','2025-01-28','2025-01-29','2025-01-30',
-      '2025-03-01','2025-05-05','2025-05-06','2025-06-06',
+      '2025-03-01','2025-05-01','2025-05-05','2025-05-06','2025-06-06',
       '2025-08-15','2025-10-03','2025-10-05','2025-10-06','2025-10-07','2025-10-08',
       '2025-10-09','2025-12-25',
       '2026-01-01','2026-01-27','2026-01-28','2026-01-29',
-      '2026-02-28','2026-03-01','2026-05-05','2026-05-24','2026-05-25',
+      '2026-02-28','2026-03-01','2026-05-01','2026-05-05','2026-05-24','2026-05-25',
       '2026-06-06','2026-08-15','2026-09-24','2026-09-25','2026-09-26',
       '2026-10-03','2026-10-05','2026-10-09','2026-12-25'
     ];
@@ -348,7 +356,7 @@
     const isSat = day === 6;
     let isOpen = false;
     if (!isHoliday && !isSun) {
-      isOpen = isSat ? (h >= 9 && h < 13) : (h >= 9 && h < 18);
+      isOpen = isSat ? (h >= 9 && h < 13) : ((h >= 9 && h < 12) || (h >= 13 && h < 18));
     }
     const el = document.getElementById('hp-today-status');
     if (el) {

@@ -68,7 +68,7 @@ const FOOTER = `
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-logo"><img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/1a1943dcee2ce.png" alt="연세이내과" class="logo-img footer-logo-img"></div>
+        <div class="footer-logo"><img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/1a1943dcee2ce.png" alt="연세이내과" class="logo-img footer-logo-img" loading="lazy"></div>
         <div class="footer-info">
           <p><strong>연세이내과</strong> YONSEI E INTERNAL MEDICINE</p>
           <p>경기도 고양시 일산서구 중앙로 1388</p>
@@ -82,16 +82,31 @@ const FOOTER = `
   </footer>
 `;
 
+const SITE_URL = process.env.SITE_URL || 'https://yonseilee.com';
+const OG_IMAGE = 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c083a202cc5e6.png';
+const DEFAULT_DESC = '고양시 일산서구 중앙로 1388, 2층. 대학병원 교수출신 신장내과 전문의 직접 진료. 혈액투석센터, 신장클리닉, 만성질환클리닉, 수액센터.';
+
 // === HTML 래퍼 ===
-function renderPage({ title, activeCategoryId, bodyContent, extraCss, extraJs }) {
+function renderPage({ title, activeCategoryId, bodyContent, extraCss, extraJs, description, canonicalPath }) {
+  const desc = description || DEFAULT_DESC;
+  const canonical = `${SITE_URL}${canonicalPath || ''}`;
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} | 연세이내과</title>
+  <meta name="description" content="${desc}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${title} | 연세이내과">
+  <meta property="og:description" content="${desc}">
+  <meta property="og:image" content="${OG_IMAGE}">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:site_name" content="연세이내과">
+  <link rel="canonical" href="${canonical}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/header-mega.css">
   ${extraCss || ''}
@@ -139,7 +154,9 @@ function renderCategoryIndex(cat) {
     activeCategoryId: cat.id,
     bodyContent: body,
     extraCss: '<link rel="stylesheet" href="/css/pages.css">',
-    extraJs: '<script src="/js/page-anim.js"></script>'
+    extraJs: '<script src="/js/page-anim.js"></script>',
+    description: getCategoryDesc(cat.id),
+    canonicalPath: cat.href
   });
 }
 
@@ -292,7 +309,7 @@ function renderSubPage(cat, child) {
     <div class="page-container">
       <div class="why-grid">
         <div class="why-image" data-anim>
-          <img src="${whyImg}" alt="${child.label}">
+          <img src="${whyImg}" alt="${child.label}" loading="lazy">
           <div class="why-image-overlay">
             <span>${why.overlay}</span>
           </div>
@@ -316,7 +333,7 @@ function renderSubPage(cat, child) {
   const articleHtml = content ? `
     <section class="col-detail"><div class="page-container">
       <div class="col-intro" data-anim>
-        <div class="col-intro-img"><img src="${catImg}" alt="${child.label}"></div>
+        <div class="col-intro-img"><img src="${catImg}" alt="${child.label}" loading="lazy"></div>
         <div class="col-intro-text">
           <h2>${child.label}</h2>
           <p>${content.intro.replace(/\. /g, '.<br>')}</p>
@@ -371,7 +388,9 @@ function renderSubPage(cat, child) {
     activeCategoryId: cat.id,
     bodyContent: body,
     extraCss: '<link rel="stylesheet" href="/css/pages.css"><link rel="stylesheet" href="/css/why-section.css"><link rel="stylesheet" href="/css/article.css"><link rel="stylesheet" href="/css/colonoscopy.css">',
-    extraJs: '<script src="/js/page-anim.js"></script>'
+    extraJs: '<script src="/js/page-anim.js"></script>',
+    description: why ? why.desc : child.desc,
+    canonicalPath: child.href
   });
 }
 
@@ -635,7 +654,9 @@ app.get('/about/directions', (req, res) => {
     activeCategoryId: 'about',
     bodyContent: body,
     extraCss: '<link rel="stylesheet" href="/css/pages.css"><link rel="stylesheet" href="/css/directions-page.css">',
-    extraJs: '<script src="/js/page-anim.js"></script><script charset="UTF-8" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script><script charset="UTF-8">new daum.roughmap.Lander({"timestamp":"1777532447206","key":"my5vbpm2yac","mapWidth":"640","mapHeight":"360"}).render();</script>'
+    extraJs: '<script src="/js/page-anim.js"></script><script charset="UTF-8" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script><script charset="UTF-8">new daum.roughmap.Lander({"timestamp":"1777532447206","key":"my5vbpm2yac","mapWidth":"640","mapHeight":"360"}).render();</script>',
+    description: '경기도 고양시 일산서구 중앙로 1388, 태화프라자 동관 2층. 3호선 주엽역 인근. 네이버·카카오지도로 길찾기.',
+    canonicalPath: '/about/directions'
   }));
 });
 
@@ -652,7 +673,7 @@ app.get('/nephrology/hemodialysis', (req, res) => {
   <section class="why-section">
     <div class="page-container"><div class="why-grid">
       <div class="why-image" data-anim>
-        <img src="${whyImg}" alt="${child.label}">
+        <img src="${whyImg}" alt="${child.label}" loading="lazy">
         <div class="why-image-overlay"><span>${why.overlay}</span></div>
       </div>
       <div class="why-content" data-anim>
@@ -670,7 +691,7 @@ app.get('/nephrology/hemodialysis', (req, res) => {
     <div class="page-container">
       <div class="dialysis-hl-inner">
         <div class="dialysis-hl-img-wrap">
-          <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/369116022/IV/MF/TP/68792294/fresenius-5008-5008s-hemodialysis-machine.jpg" alt="Fresenius 5008S 혈액투석기">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/369116022/IV/MF/TP/68792294/fresenius-5008-5008s-hemodialysis-machine.jpg" alt="Fresenius 5008S 혈액투석기" loading="lazy">
         </div>
         <div class="dialysis-hl-content">
           <span class="dialysis-hl-badge">HEMODIALYSIS EQUIPMENT</span>
@@ -731,7 +752,9 @@ app.get('/nephrology/hemodialysis', (req, res) => {
     activeCategoryId: 'nephrology',
     bodyContent: body,
     extraCss: '<link rel="stylesheet" href="/css/pages.css"><link rel="stylesheet" href="/css/why-section.css"><link rel="stylesheet" href="/css/colonoscopy.css">',
-    extraJs: '<script src="/js/page-anim.js"></script>'
+    extraJs: '<script src="/js/page-anim.js"></script>',
+    description: '최신 Fresenius 5008S 혈액투석기 보유. 신장내과 전문의 직접 관리. HDF(혈액투석여과요법) 가능한 연세이내과 혈액투석센터.',
+    canonicalPath: '/nephrology/hemodialysis'
   }));
 });
 
@@ -875,7 +898,9 @@ app.get('/about/hours', (req, res) => {
     activeCategoryId: 'about',
     bodyContent: body,
     extraCss: '<link rel="stylesheet" href="/css/pages.css">',
-    extraJs: '<script src="/js/page-anim.js"></script>' + hoursJs
+    extraJs: '<script src="/js/page-anim.js"></script>' + hoursJs,
+    description: '연세이내과 진료시간 안내. 평일 09:00–18:00, 토요일 09:00–13:00, 점심시간 12:00–13:00. 공휴일·일요일 휴진.',
+    canonicalPath: '/about/hours'
   }));
 });
 
