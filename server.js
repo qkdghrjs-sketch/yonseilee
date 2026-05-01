@@ -82,7 +82,7 @@ const FOOTER = `
   </footer>
 `;
 
-const SITE_URL = process.env.SITE_URL || 'https://yonseilee.com';
+const SITE_URL = process.env.SITE_URL || 'https://yonseilee.vercel.app';
 const OG_IMAGE = 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c083a202cc5e6.png';
 const DEFAULT_DESC = '고양시 일산서구 중앙로 1388, 2층. 대학병원 교수출신 신장내과 전문의 직접 진료. 혈액투석센터, 신장클리닉, 만성질환클리닉, 수액센터.';
 
