@@ -220,3 +220,116 @@
   line-height: 1.7;
   padding: 2px 0;
 }
+
+/* ===== 새 의료진 프로필 레이아웃 (시원시원 텍스트형) ===== */
+.doctor-profile-block {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+  margin-bottom: 48px;
+  overflow: hidden;
+}
+
+/* 상단 헤더: 이름/직함 */
+.doctor-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 36px 40px;
+  background: linear-gradient(135deg, #003876 0%, #2E86AB 100%);
+  color: #fff;
+}
+
+/* 아코디언 영역 */
+.doctor-profile-accordion {
+  padding: 0 40px 32px;
+  margin-top: 0;
+}
+
+.dp-acc-item {
+  border-bottom: 1px solid #edf1f5;
+}
+.dp-acc-item:last-child {
+  border-bottom: none;
+}
+
+.dp-acc-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2e44;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  gap: 12px;
+  letter-spacing: -0.01em;
+}
+.dp-acc-summary::-webkit-details-marker { display: none; }
+
+.dp-acc-summary::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23003876' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.25s ease;
+}
+.dp-acc-item[open] > .dp-acc-summary::after { transform: rotate(180deg); }
+.dp-acc-item[open] > .dp-acc-summary { color: #003876; }
+
+.dp-acc-body {
+  padding: 0 0 20px 0;
+  animation: accFadeIn 0.2s ease;
+}
+
+/* 이력 리스트 */
+.dp-acc-body .doctor-page-career {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 32px;
+}
+
+.dp-acc-body .doctor-page-career li {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.7;
+  padding: 4px 0 4px 14px;
+  position: relative;
+}
+.dp-acc-body .doctor-page-career li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 5px;
+  height: 5px;
+  background: #2E86AB;
+  border-radius: 50%;
+}
+
+/* 모바일: 1열로 */
+@media (max-width: 640px) {
+  .doctor-profile-header {
+    padding: 28px 20px;
+    gap: 18px;
+  }
+  .doctor-profile-accordion {
+    padding: 0 20px 24px;
+  }
+  .dp-acc-body .doctor-page-career {
+    grid-template-columns: 1fr;
+  }
+  .dp-acc-summary {
+    padding: 16px 0;
+    font-size: 14px;
+  }
+}
