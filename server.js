@@ -1024,22 +1024,21 @@ app.get('/iv-therapy/general', (req, res) => {
 // /about/gallery 둘러보기 갤러리 페이지
 app.get('/about/gallery', (req, res) => {
   const GALLERY_IMGS = [
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c083a202cc5e6.png', alt: '원내 시설 1' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a9571802204d5.png', alt: '원내 시설 2' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5156480ce2cce.png', alt: '원내 시설 3' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/264029ec718d7.png', alt: '원내 시설 4' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/cf7d331f24685.png', alt: '원내 시설 1' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/33b1f6b37fd63.png', alt: '원내 시설 2' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/34964b2b5715e.png', alt: '원내 시설 3' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/401187f029c58.png', alt: '원내 시설 4' },
     { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a4892fa561eaf.png', alt: '원내 시설 5' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a5716bbbcea1c.png', alt: '원내 시설 6' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/65bcf1a1fb398.png', alt: '원내 시설 7' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/17e884a84f100.png', alt: '원내 시설 8' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/380b6a478edfc.png', alt: '원내 시설 9' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/55442e3d65ac5.png', alt: '원내 시설 10' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/34964b2b5715e.png', alt: '원내 시설 11' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/401187f029c58.png', alt: '원내 시설 12' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/33b1f6b37fd63.png', alt: '원내 시설 13' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/08f4445e31b17.png', alt: '원내 시설 14' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/264029ec718d7.png', alt: '원내 시설 6' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a5716bbbcea1c.png', alt: '원내 시설 7' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/65bcf1a1fb398.png', alt: '원내 시설 8' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/17e884a84f100.png', alt: '원내 시설 9' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/380b6a478edfc.png', alt: '원내 시설 10' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/55442e3d65ac5.png', alt: '원내 시설 11' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/08f4445e31b17.png', alt: '원내 시설 12' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c083a202cc5e6.png', alt: '원내 시설 13' },
+    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a9571802204d5.png', alt: '원내 시설 14' },
     { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a937a93aa9df7.png', alt: '원내 시설 15' },
-    { src: 'https://cdn.imweb.me/upload/S20260108b9005a7eb2710/cf7d331f24685.png', alt: '원내 시설 16' },
   ];
   const gridItems = GALLERY_IMGS.map((img, i) => `
     <div class="gallery-item" data-anim data-delay="${i % 4}">
