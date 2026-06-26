@@ -646,6 +646,7 @@ app.get('/about/directions', (req, res) => {
           </div>
           <div class="directions-cta">
             <h4>진료 예약 · 문의</h4>
+            <a href="tel:031-922-1570" class="cta-btn">031-922-1570</a>
           </div>
         </div>
         <div class="directions-map">
