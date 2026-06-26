@@ -470,7 +470,7 @@ app.get('/about/doctors', (req, res) => {
       <!-- 이호영 원장 -->
       <div class="doctor-profile-block" data-anim>
         <div class="doctor-profile-header">
-          <div class="doctor-profile-photo" style="background:linear-gradient(135deg,#003876,#2E86AB)">
+          <div class="doctor-profile-photo" style="background:rgba(255,255,255,0.15)">
             <span>院長</span>
           </div>
           <div class="doctor-profile-title">
@@ -532,7 +532,7 @@ app.get('/about/doctors', (req, res) => {
       <!-- 이용규 원장 -->
       <div class="doctor-profile-block" data-anim>
         <div class="doctor-profile-header">
-          <div class="doctor-profile-photo" style="background:linear-gradient(135deg,#2E86AB,#6BC0D4)">
+          <div class="doctor-profile-photo" style="background:rgba(255,255,255,0.15)">
             <span>院長</span>
           </div>
           <div class="doctor-profile-title">
