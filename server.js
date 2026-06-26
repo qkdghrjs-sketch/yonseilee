@@ -479,50 +479,53 @@ app.get('/about/doctors', (req, res) => {
             <p class="doctor-profile-pos">연세대학교 의과대학 내과 명예교수 · 연세이내과 원장</p>
           </div>
         </div>
-        <div class="doctor-profile-body">
-          <div class="doctor-profile-col">
-            <h4 class="dp-section-title">학력 · 자격</h4>
-            <ul class="doctor-page-career">
-              <li>연세대학교 의과대학 졸업</li>
-              <li>연세대학교 대학원 의학석사</li>
-              <li>연세대학교 대학원 의학박사</li>
-              <li>대한내과학회 내과 전문의</li>
-              <li>대한내과학회 신장내과 분과전문의</li>
-              <li>대한신장학회 투석 전문의</li>
-            </ul>
-            <h4 class="dp-section-title" style="margin-top:20px">해외 연수</h4>
-            <ul class="doctor-page-career">
-              <li>미국 뉴욕 Albert Einstein 의과대학 Montefiore Hospital 연구원</li>
-              <li>미국 뉴욕 Cornell 대학 방문교수</li>
-            </ul>
-          </div>
-          <div class="doctor-profile-col">
-            <h4 class="dp-section-title">주요 경력</h4>
-            <ul class="doctor-page-career">
-              <li>연세대학교 의과대학 내과 정교수</li>
-              <li>연세대학교 의과대학 내과 명예교수</li>
-              <li>대한신장학회 이사장</li>
-              <li>2010년 아시아태평양신장학회 조직위원장</li>
-              <li>세브란스병원 신장내과 과장</li>
-              <li>세브란스병원 수련부장</li>
-              <li>세브란스병원 신장병센터 소장</li>
-              <li>연세대학교 신장질환연구소 소장</li>
-              <li>대한혈액투석여과학회 초대 회장</li>
-            </ul>
-          </div>
-          <div class="doctor-profile-col">
-            <h4 class="dp-section-title">학회 활동</h4>
-            <ul class="doctor-page-career">
-              <li>대한내과학회 평의원</li>
-              <li>대한신장학회 평의원</li>
-              <li>대한이식학회 정회원</li>
-              <li>아시아태평양신장학회 평의원</li>
-              <li>국제신장학회 정회원</li>
-              <li>미국신장학회 정회원</li>
-              <li>유럽신장학회 정회원</li>
-              <li>대한민국의학한림원 정회원</li>
-            </ul>
-          </div>
+        <div class="doctor-profile-accordion">
+          <details class="dp-acc-item" open>
+            <summary class="dp-acc-summary">학력 · 자격 &amp; 해외 연수</summary>
+            <div class="dp-acc-body">
+              <ul class="doctor-page-career">
+                <li>연세대학교 의과대학 졸업</li>
+                <li>연세대학교 대학원 의학석사</li>
+                <li>연세대학교 대학원 의학박사</li>
+                <li>대한내과학회 내과 전문의</li>
+                <li>대한내과학회 신장내과 분과전문의</li>
+                <li>대한신장학회 투석 전문의</li>
+                <li>미국 뉴욕 Albert Einstein 의과대학 Montefiore Hospital 연구원</li>
+                <li>미국 뉴욕 Cornell 대학 방문교수</li>
+              </ul>
+            </div>
+          </details>
+          <details class="dp-acc-item">
+            <summary class="dp-acc-summary">주요 경력</summary>
+            <div class="dp-acc-body">
+              <ul class="doctor-page-career">
+                <li>연세대학교 의과대학 내과 정교수</li>
+                <li>연세대학교 의과대학 내과 명예교수</li>
+                <li>대한신장학회 이사장</li>
+                <li>2010년 아시아태평양신장학회 조직위원장</li>
+                <li>세브란스병원 신장내과 과장</li>
+                <li>세브란스병원 수련부장</li>
+                <li>세브란스병원 신장병센터 소장</li>
+                <li>연세대학교 신장질환연구소 소장</li>
+                <li>대한혈액투석여과학회 초대 회장</li>
+              </ul>
+            </div>
+          </details>
+          <details class="dp-acc-item">
+            <summary class="dp-acc-summary">학회 활동</summary>
+            <div class="dp-acc-body">
+              <ul class="doctor-page-career">
+                <li>대한내과학회 평의원</li>
+                <li>대한신장학회 평의원</li>
+                <li>대한이식학회 정회원</li>
+                <li>아시아태평양신장학회 평의원</li>
+                <li>국제신장학회 정회원</li>
+                <li>미국신장학회 정회원</li>
+                <li>유럽신장학회 정회원</li>
+                <li>대한민국의학한림원 정회원</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
 
@@ -538,41 +541,44 @@ app.get('/about/doctors', (req, res) => {
             <p class="doctor-profile-pos">연세이내과 대표원장</p>
           </div>
         </div>
-        <div class="doctor-profile-body">
-          <div class="doctor-profile-col">
-            <h4 class="dp-section-title">학력 · 자격</h4>
-            <ul class="doctor-page-career">
-              <li>연세대학교 의과대학 졸업</li>
-              <li>연세대학교 대학원 의학 석사</li>
-              <li>대한내과학회 내과 전문의</li>
-              <li>대한내과학회 신장내과 분과전문의</li>
-              <li>대한신장학회 투석 전문의</li>
-            </ul>
-            <h4 class="dp-section-title" style="margin-top:20px">해외 연수</h4>
-            <ul class="doctor-page-career">
-              <li>Harold Simmons Center for Kidney Disease Research and Epidemiology, University of California Irvine, School of Medicine, 방문 교수</li>
-            </ul>
-          </div>
-          <div class="doctor-profile-col">
-            <h4 class="dp-section-title">주요 경력</h4>
-            <ul class="doctor-page-career">
-              <li>세브란스병원 외래 교수</li>
-              <li>국민건강보험 일산병원 교수</li>
-            </ul>
-          </div>
-          <div class="doctor-profile-col">
-            <h4 class="dp-section-title">학회 활동</h4>
-            <ul class="doctor-page-career">
-              <li>대한내과학회 평의원</li>
-              <li>대한신장학회 평의원</li>
-              <li>대한이식학회 정회원</li>
-              <li>대한혈액투석여과학회 정회원</li>
-              <li>국제신장학회 정회원</li>
-              <li>미국신장학회 정회원</li>
-              <li>유럽신장학회 정회원</li>
-              <li>아시아 태평양 신장학회 정회원</li>
-            </ul>
-          </div>
+        <div class="doctor-profile-accordion">
+          <details class="dp-acc-item" open>
+            <summary class="dp-acc-summary">학력 · 자격 &amp; 해외 연수</summary>
+            <div class="dp-acc-body">
+              <ul class="doctor-page-career">
+                <li>연세대학교 의과대학 졸업</li>
+                <li>연세대학교 대학원 의학 석사</li>
+                <li>대한내과학회 내과 전문의</li>
+                <li>대한내과학회 신장내과 분과전문의</li>
+                <li>대한신장학회 투석 전문의</li>
+                <li>Harold Simmons Center for Kidney Disease Research and Epidemiology, University of California Irvine, School of Medicine, 방문 교수</li>
+              </ul>
+            </div>
+          </details>
+          <details class="dp-acc-item">
+            <summary class="dp-acc-summary">주요 경력</summary>
+            <div class="dp-acc-body">
+              <ul class="doctor-page-career">
+                <li>세브란스병원 외래 교수</li>
+                <li>국민건강보험 일산병원 교수</li>
+              </ul>
+            </div>
+          </details>
+          <details class="dp-acc-item">
+            <summary class="dp-acc-summary">학회 활동</summary>
+            <div class="dp-acc-body">
+              <ul class="doctor-page-career">
+                <li>대한내과학회 평의원</li>
+                <li>대한신장학회 평의원</li>
+                <li>대한이식학회 정회원</li>
+                <li>대한혈액투석여과학회 정회원</li>
+                <li>국제신장학회 정회원</li>
+                <li>미국신장학회 정회원</li>
+                <li>유럽신장학회 정회원</li>
+                <li>아시아 태평양 신장학회 정회원</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
 
