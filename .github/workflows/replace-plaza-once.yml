@@ -1,0 +1,56 @@
+name: Replace plaza name once
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Replace plaza name and remove temporary runtime patch
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+
+          nav_path = Path('data/navigation.js')
+          if nav_path.exists():
+              content = nav_path.read_text(encoding='utf-8')
+              marker = 'const NAVIGATION = ['
+              if content.lstrip().startswith("const http = require('http');") and marker in content:
+                  nav_path.write_text(content[content.index(marker):], encoding='utf-8')
+
+          for path in Path('.').rglob('*'):
+              if path.is_dir() or '.git' in path.parts:
+                  continue
+              try:
+                  content = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              updated = content.replace('태화프라자', '태영프라자')
+              if updated != content:
+                  path.write_text(updated, encoding='utf-8')
+          PY
+          rm -f .github/workflows/replace-plaza-once.yml
+
+      - name: Commit replacement
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Replace plaza name across site"
+          git push
