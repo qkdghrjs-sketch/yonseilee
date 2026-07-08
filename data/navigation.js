@@ -1,3 +1,53 @@
+const http = require('http');
+
+const TEXT_REPLACEMENTS = [
+  ['태화프라자', '태영프라자'],
+];
+
+if (!http.ServerResponse.prototype.__yonseiTextReplacementPatch) {
+  const originalEnd = http.ServerResponse.prototype.end;
+
+  http.ServerResponse.prototype.end = function patchedEnd(chunk, encoding, callback) {
+    let nextChunk = chunk;
+    let nextEncoding = encoding;
+    let nextCallback = callback;
+
+    if (typeof nextEncoding === 'function') {
+      nextCallback = nextEncoding;
+      nextEncoding = undefined;
+    }
+
+    if (nextChunk && (typeof nextChunk === 'string' || Buffer.isBuffer(nextChunk))) {
+      const contentTypeHeader = this.getHeader('Content-Type');
+      const contentType = contentTypeHeader ? String(contentTypeHeader).toLowerCase() : '';
+      const shouldReplace = !contentType || contentType.includes('text/html') || contentType.includes('application/xhtml+xml');
+
+      if (shouldReplace) {
+        const wasBuffer = Buffer.isBuffer(nextChunk);
+        const charset = typeof nextEncoding === 'string' && Buffer.isEncoding(nextEncoding) ? nextEncoding : 'utf8';
+        let body = wasBuffer ? nextChunk.toString(charset) : String(nextChunk);
+        const originalBody = body;
+
+        for (const [from, to] of TEXT_REPLACEMENTS) {
+          body = body.split(from).join(to);
+        }
+
+        if (body !== originalBody) {
+          this.removeHeader('Content-Length');
+          nextChunk = wasBuffer ? Buffer.from(body, charset) : body;
+        }
+      }
+    }
+
+    return originalEnd.call(this, nextChunk, nextEncoding, nextCallback);
+  };
+
+  Object.defineProperty(http.ServerResponse.prototype, '__yonseiTextReplacementPatch', {
+    value: true,
+    enumerable: false,
+  });
+}
+
 const NAVIGATION = [
   {
     id: 'about',
