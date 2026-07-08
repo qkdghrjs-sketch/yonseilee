@@ -72,7 +72,7 @@ const FOOTER = `
         <div class="footer-info">
           <p><strong>연세이내과</strong> YONSEI E INTERNAL MEDICINE</p>
           <p>경기도 고양시 일산서구 중앙로 1388</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.6)">태화프라자 동관 2층</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.6)">태영프라자 동관 2층</p>
           <p>혈액투석센터 · 신장클리닉 · 만성질환클리닉 · 수액센터</p>
           <p style="margin-top:6px;font-size:13px;color:rgba(255,255,255,0.5)">대학병원 교수출신 의료진의 기준을 담다</p>
         </div>
@@ -607,7 +607,7 @@ app.get('/about/directions', (req, res) => {
   <section class="page-hero page-hero-sm" style="--hero-color:#5F5E5A">
     <div class="page-hero-inner" data-anim>
       <h1>오시는 길</h1>
-      <p>3호선 주엽역 인근 · 태화프라자 동관 2층</p>
+      <p>3호선 주엽역 인근 · 태영프라자 동관 2층</p>
     </div>
   </section>
   <section class="page-section">
@@ -622,7 +622,7 @@ app.get('/about/directions', (req, res) => {
           <div class="directions-address">
             <h2>연세이내과</h2>
             <p class="directions-addr-text">경기도 고양시 일산서구 중앙로 1388</p>
-            <p class="directions-addr-sub">태화프라자 동관 2층</p>
+            <p class="directions-addr-sub">태영프라자 동관 2층</p>
           </div>
           <div class="directions-detail">
             <div class="directions-item">
@@ -631,7 +631,7 @@ app.get('/about/directions', (req, res) => {
             </div>
             <div class="directions-item">
               <strong>🅿️ 주차</strong>
-              <p>태화프라자 주차장 이용 가능</p>
+              <p>태영프라자 주차장 이용 가능</p>
               <div class="map-btn-group">
                 <a href="https://naver.me/xrcDf71g" target="_blank" rel="noopener" class="map-btn map-btn-naver">
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -662,7 +662,7 @@ app.get('/about/directions', (req, res) => {
     bodyContent: body,
     extraCss: '<link rel="stylesheet" href="/css/pages.css"><link rel="stylesheet" href="/css/directions-page.css">',
     extraJs: '<script src="/js/page-anim.js"></script><script charset="UTF-8" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script><script charset="UTF-8">new daum.roughmap.Lander({"timestamp":"1777532447206","key":"my5vbpm2yac","mapWidth":"640","mapHeight":"360"}).render();</script>',
-    description: '경기도 고양시 일산서구 중앙로 1388, 태화프라자 동관 2층. 3호선 주엽역 인근. 네이버·카카오지도로 길찾기.',
+    description: '경기도 고양시 일산서구 중앙로 1388, 태영프라자 동관 2층. 3호선 주엽역 인근. 네이버·카카오지도로 길찾기.',
     canonicalPath: '/about/directions'
   }));
 });
